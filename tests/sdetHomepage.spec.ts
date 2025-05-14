@@ -13,7 +13,7 @@ test.describe("Sdet Homepage test", () => {
     //Click on get started button
     await page.locator("#get-started").click();
 
-    const headingText = page.locator('text="Think different. Make different"');
+    const headingText = page.locator('text="Think different. Make different."');
 
     //verify url has #get-started
     await expect(page).toHaveURL(/.*#get-started/);
