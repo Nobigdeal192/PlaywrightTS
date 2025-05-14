@@ -32,5 +32,21 @@ test.describe("Sdet Homepage test", () => {
 
     //Verify Home link is enabled
     await expect(homeText).toBeEnabled();
+
+    // getByRole locators
+    await page.getByRole('link', {name: "Shop"}).click();
+
+    //setting const with css selector
+    const searchField = page.locator('.search-field');
+    await expect(searchField).toBeVisible();
+
+    //using placeholder locator
+    await page.locator('[placeholder="Search products…"]').click();
+
+    //Add text to search input field
+    await searchField.pressSequentially("Nick");
+
+    await page.fill(".search-field", "Nick");
+    
   });
 });
