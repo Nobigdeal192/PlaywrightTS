@@ -50,7 +50,13 @@ export default defineConfig({
       name: "webkit",
       use: { ...devices["Desktop Safari"], headless: true },
     },
-
+  //{
+  //  name: 'Mobile Chrome',
+  //  use: {
+  //    ...devices['iPhone 12'],
+  //    browserName: 'chromium',
+  //  },
+  // },
     /* Test against mobile viewports. */
     // {
     //   name: 'Mobile Chrome',

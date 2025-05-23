@@ -25,6 +25,6 @@ test.describe('Blizzard Entertainment web tests', () => {
          
          // Page have D4 title
          await expect(page).toHaveTitle("Diablo IV");
-         await expect(page.getByRole('button', {name:"Buy Now"})).toBeVisible();
+         await expect(page.getByRole('button', {name:"Buy Now"}).first()).toBeVisible();
     })
 });
